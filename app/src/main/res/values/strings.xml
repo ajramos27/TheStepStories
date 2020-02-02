@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TheStepStories</string>
+    <string name="app_name">The Step Stories</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -14,6 +14,14 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
 
-    <string name="quote1">"Everything is beautiful, all that matters is to able to intepret"</string>
-    <string name="author1">Alfredo Bustamante</string>
+    <string name="quote1">\"Be the change you want to see in the world\"</string>
+    <string name="author1">Martha Hernandez</string>
+
+
+    <string name="story1">30 years, have now gone by, and if I could go back in time, I would not change the process one bit. It has been hard, it has been tough… needless to say, how many times I’ve cried. But, El Paso was always there. My local restaurant, my neighbor, my car mechanic, even the elotero, they were all there, when I needed a smile, a laugh and a hug. I love my people, I love my city, I love el Chuco. </string>
+    <string name="story2">I still remember my first day here in Sun City. I remember saying, “what could possibly keep all these people united? I mean do they all talk to each other? Got out with each other? What is this “thing” they all follow? Well, it took nothing to know, that this city was united through love. United through their roots and values. United through food, passion, hard-work, integrity and commitment. El Pasoans, they are one of a kind. My city, all I can say is, thank you. </string>
+    <string name="story3">I, along my father and his father, are proud to say we are from El Paso. This city has now been on 3 generations, and will come to its 4thin 9 months from now. Yes, I will be a dad I cannot ask for a better city. A community, a family, that has allowed us to grow and engage with each other, a community of helping others, and always saying yes to grandma’s food. The Sunsets the Sunrise, the EVERYTHING. El Paso, I am honored to say that name, thank you. </string>
+    <string name="story4">The lights, the food, the supportive community, is what keeps me here. Why would I leave a city that has it all? A city that gave my parents all the resources to succeed in life. I owe it all to this city and “open-arms” it gave my parents. To my gente, thank you. </string>
+
+
 </resources>

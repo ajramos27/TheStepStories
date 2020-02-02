@@ -8,8 +8,14 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="53dp"
         android:theme="@style/AppTheme.AppBarOverlay">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="84dp"
+            android:layout_height="53dp"
+            app:srcCompat="@drawable/unnamed" />
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"

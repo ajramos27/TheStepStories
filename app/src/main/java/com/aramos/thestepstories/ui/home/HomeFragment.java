@@ -1,31 +1,30 @@
 package com.aramos.thestepstories.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import android.support.annotation.Nullable;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 
-import com.aramos.thestepstories.Event;
-import com.aramos.thestepstories.EventAdapter;
+import com.aramos.thestepstories.PicturesActivity;
+import com.aramos.thestepstories.ui.quotes.QuotesActivity;
+import com.aramos.thestepstories.ui.stories.StoriesActivity;
+import com.aramos.thestepstories.ui.events.EventsActivity;
 import com.aramos.thestepstories.R;
-
-import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
-    private RecyclerView recyclerView;
-    private EventAdapter adapter;
-    private ArrayList<Event> eventArrayList;
+
+
+    private CardView cardQuotes;
+    private CardView cardStories;
+    private CardView cardEvents;
+    private CardView cardPictures;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -33,20 +32,47 @@ public class HomeFragment extends Fragment {
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-        recyclerView = root.findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        eventArrayList = new ArrayList<>();
-        adapter = new EventAdapter(getContext(), eventArrayList);
-        recyclerView.setAdapter(adapter);
 
-        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), LinearLayoutManager.VERTICAL));
-        recyclerView.setAdapter(adapter);
+        cardQuotes = root.findViewById(R.id.cardQuotes);
+        cardStories = root.findViewById(R.id.cardStories);
+        cardEvents = root.findViewById(R.id.cardEvents);
+        cardPictures = root.findViewById(R.id.cardPictures);
 
-        Event event = new Event("El Paso Strong - Hackathon");
-        eventArrayList.add(event);
-        Event event2 = new Event("Hola Mundo");
-        eventArrayList.add(event2);
+        cardQuotes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent quotes = new Intent(getContext(), QuotesActivity.class);
+                startActivity(quotes);
+            }
+        });
+
+        cardStories.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent stories = new Intent(getContext(), StoriesActivity.class);
+                startActivity(stories);
+            }
+        });
+
+        cardEvents = root.findViewById(R.id.cardEvents);
+        cardEvents.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent events = new Intent(getContext(), EventsActivity.class);
+                startActivity(events);
+            }
+        });
+
+        cardPictures.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pictures = new Intent(getContext(), PicturesActivity.class);
+                startActivity(pictures);
+            }
+        });
+
+
 
         return root;
     }
